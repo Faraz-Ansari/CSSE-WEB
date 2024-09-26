@@ -1,5 +1,5 @@
 // components/Event.js
-import React, { useState } from "react";
+import { useState } from "react";
 import EventCarousel from "../../Components/Carousel";
 import { eventsData } from "../../Components/EventData";
 
@@ -9,11 +9,9 @@ const Event = () => {
     return (
         <div className="p-4 md:p-6">
             {" "}
-            {/* Add padding for small screens */}
             {/* Tab navigation */}
             <div className="tabs tabs-boxed font-semibold  flex-wrap">
                 {" "}
-                {/* Flex-wrap for smaller screens */}
                 <button
                     className={`tab ${
                         activeTab === "formalEvents" ? "tab-active" : ""
@@ -39,10 +37,8 @@ const Event = () => {
                     Other Events
                 </button>
             </div>
-            {/* Tab content with responsive margin */}
             <div className="mt-4 md:mt-8">
                 {" "}
-                {/* More margin on larger screens */}
                 {activeTab === "formalEvents" && (
                     <EventCarousel events={eventsData.formalEvents} />
                 )}
